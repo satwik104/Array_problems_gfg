@@ -1,0 +1,32 @@
+An element is called a peak element if its value is not smaller than the value of its adjacent elements(if they exists).
+Given an array arr[] of size N, find the index of any one of its peak elements.
+Note: The generated output will always be 1 if the index that you return is correct. Otherwise output will be 0. 
+
+Input:
+N = 3
+arr[] = {1,2,3}
+Output: 1
+Explanation: index 2 is 3.
+It is the peak element as it is 
+greater than its neighbour 2.
+
+******I have given the code of required function, you can find the driver code on gfg site**********
+Code-
+int peakElement(int arr[], int n)
+{
+    if(arr[0]>arr[1])
+     return 0;
+    else
+    {
+        for(int i=1; i<n-1; i++)
+   {
+       if(arr[i]>arr[i-1] && arr[i]>arr[i+1])
+       {
+           return i;
+       }
+   }
+    }
+}
+
+Total Time Taken:
+0.1/1.1
